@@ -46,12 +46,17 @@ pub struct Status {
 pub struct BootEntry {
     pub cached_update: Option<ImageStatus>,
     pub composefs: Option<serde_json::Value>,
+    #[serde(default)]
     pub download_only: bool,
     pub image: ImageStatus,
+    #[serde(default)]
     pub incompatible: bool,
     pub ostree: OstreeStatus,
+    #[serde(default)]
     pub pinned: bool,
+    #[serde(default)]
     pub soft_reboot_capable: bool,
+    #[serde(default)]
     pub store: String,
 }
 
